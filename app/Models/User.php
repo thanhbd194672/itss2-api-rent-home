@@ -3,8 +3,11 @@
 namespace App\Models;
 
 // use Illuminate\Contracts\Auth\MustVerifyEmail;
+use App\Structs\User\UserStruct;
+use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Concerns\HasUlids;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Model;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Laravel\Sanctum\HasApiTokens;
@@ -62,5 +65,19 @@ class User extends Authenticatable implements JWTSubject
     public function getJWTCustomClaims(): array
     {
         return [];
+    }
+
+    public function struct(): UserStruct
+    {
+
+        return new UserStruct($this->getAttributes());
+    }
+
+    public static function getUserByName(string $name, array $filter): Builder|Model|null
+    {
+        return self::query()
+            ->where('username',$name)
+            ->distinct()
+            ->first($filter);
     }
 }
