@@ -8,7 +8,7 @@ code chủ yếu trong Apps Http/Controller, Models,
 
 Set route ở routes 
 
-ae down về nếu sửa gì nhớ fetch bản mới nhất về trước rồi sửa code sau đăng code lên theo thứ tự(bên front-end cũng vậy)
+ae down về nếu sửa gì nhớ fetch bản mới nhất về trước rồi sửa code sau đăng code lên theo thứ tự(bên front-end cũng vậy với branch main)
 
 git fetch origin dev 
 
