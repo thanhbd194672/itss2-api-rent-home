@@ -1,6 +1,5 @@
 <?php
 
-use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -18,7 +17,10 @@ Route::get('/', function () {
 });
 
 Route::post('auth/login', 'Auth\LoginController@index');
-Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
-
-    return $request->user();
+Route::middleware('auth:sanctum')->group(function (){
+    Route::group(['namespace' => 'Post', 'prefix' => 'post'], function (){
+        Route::get('gets','PostController@getPosts');
+        Route::get('get/{id}','PostController@getPost');
+        Route::post('add','PostController@addPost');
+    }) ;
 });

@@ -6,7 +6,7 @@ use App\Consts\DbTypes;
 abstract class DBPostFields
 {
 	const POSTS = [
-		'updated_at' => [
+		'image' => [
 			'type' => DbTypes::STRING,
 			'cache' => true,
 		],
@@ -14,27 +14,27 @@ abstract class DBPostFields
 			'type' => DbTypes::INT,
 			'cache' => true,
 		],
-		'area' => [
-			'type' => DbTypes::FLOAT,
-			'cache' => true,
-		],
-		'rating' => [
-			'type' => DbTypes::FLOAT,
-			'cache' => true,
-		],
-		'image' => [
-			'type' => DbTypes::STRING,
-			'cache' => true,
-		],
-		'additional_infomation' => [
-			'type' => DbTypes::STRING,
+		'additional_information' => [
+			'type' => DbTypes::JSON,
 			'cache' => true,
 		],
 		'created_at' => [
 			'type' => DbTypes::STRING,
 			'cache' => true,
 		],
-		'description' => [
+		'updated_at' => [
+			'type' => DbTypes::STRING,
+			'cache' => true,
+		],
+		'area' => [
+			'type' => DbTypes::FLOAT,
+			'cache' => true,
+		],
+		'owner_name' => [
+			'type' => DbTypes::STRING,
+			'cache' => true,
+		],
+		'owner_phone_number' => [
 			'type' => DbTypes::STRING,
 			'cache' => true,
 		],
@@ -42,7 +42,11 @@ abstract class DBPostFields
 			'type' => DbTypes::STRING,
 			'cache' => true,
 		],
-		'owner_name' => [
+		'id' => [
+			'type' => DbTypes::STRING,
+			'cache' => true,
+		],
+		'address' => [
 			'type' => DbTypes::STRING,
 			'cache' => true,
 		],
@@ -54,19 +58,15 @@ abstract class DBPostFields
 			'type' => DbTypes::STRING,
 			'cache' => true,
 		],
-		'owner_phone_number' => [
-			'type' => DbTypes::STRING,
-			'cache' => true,
-		],
 		'type' => [
 			'type' => DbTypes::STRING,
 			'cache' => true,
 		],
-		'id' => [
+		'rental_status' => [
 			'type' => DbTypes::STRING,
 			'cache' => true,
 		],
-		'rent_status' => [
+		'description' => [
 			'type' => DbTypes::STRING,
 			'cache' => true,
 		],

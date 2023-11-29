@@ -19,6 +19,7 @@ return new class extends Migration
             $table->string('type');
             $table->double('area');
             $table->string('rent_status');
+            $table->string('address');
             $table->string('description');
             $table->double('rating');
             $table->string('owner_name');
