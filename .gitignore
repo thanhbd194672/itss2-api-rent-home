@@ -17,3 +17,10 @@ yarn-error.log
 /.fleet
 /.idea
 /.vscode
+Dockerfile-php
+Dockerfile-nginx
+docker-compose.yml
+docker-run.sh
+_docker
+_store
+nginx
